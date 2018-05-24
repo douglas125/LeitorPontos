@@ -506,6 +506,7 @@
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(23, 36);
             this.btnAbout.Text = "Informações sobre o programa";
+            this.btnAbout.Visible = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnQuit
@@ -515,7 +516,7 @@
             this.btnQuit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(28, 36);
+            this.btnQuit.Size = new System.Drawing.Size(28, 28);
             this.btnQuit.Text = "Sair do Leitor de Pontos";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
