@@ -10,9 +10,9 @@ LeitorPontos is a tool for quickly extracting data points from an image.
 
 2. Right click to position 2 reference points;
 
-![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LPtsPositionPt.png "Open image")
+![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LPtsPositionPt2.png "Set reference")
 
 3. Click on the points you want to scan;
 4. Copy and paste your data to a spreadsheet.
 
-![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LPtsAcqPts.png "Open image")
+![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LPtsAcqPts.png "Get points")
