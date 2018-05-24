@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LinearAlgebra</name>
+    </assembly>
+    <members>
+        <member name="T:LinearAlgebra.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LinearAlgebra.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LinearAlgebra.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:LinearAlgebra.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:LinearAlgebra.Matrix">
+            <summary>Creates a Matrix of real numbers.</summary>
+        </member>
+        <member name="F:LinearAlgebra.Matrix.Items">
+            <summary>Matrix items</summary>
+        </member>
+        <member name="F:LinearAlgebra.Matrix.LINALGMAXERROR">
+            <summary> Linear Solve parameter. Maximum mean error allowable to linear solve method.</summary>
+        </member>
+        <member name="F:LinearAlgebra.Matrix.LIMITITERS">
+            <summary> Linear Solve parameter. Limit linear solution correction iterations.</summary>
+        </member>
+        <member name="F:LinearAlgebra.Matrix.IGNOREHARDSINGULARITY">
+            <summary> Linear Solve parameter. Should the solution method halt if a hard singulariry is found in matrix?</summary>
+        </member>
+        <member name="F:LinearAlgebra.Matrix.IGNORENULLDETERMINANT">
+            <summary> Linear Solve parameter. Should the method ignore if the matrix has a close-to-zero determinant and keep solving?</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.#ctor">
+            <summary> Constructor. Initializes a [0,0] matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.#ctor(System.Double[0:,0:])">
+            <summary> Constructor. Creates matrix from existing items.</summary>
+            <param name="MatrixItems">Matrix items to create matrix from.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.#ctor(LinearAlgebra.Matrix)">
+            <summary> Copy constructor.</summary>
+            <param name="m">Matrix to copy from.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.#ctor(System.Int32,System.Int32)">
+            <summary> Constructor. Creates empty matrix with specified dimensions.</summary>
+            <param name="numRows">Number of rows in matrix.</param>
+            <param name="numCols">Number of columns in matrix.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Addition(LinearAlgebra.Matrix,LinearAlgebra.Matrix)">
+            <summary> Sums two matrixes.</summary>
+            <param name="m1">First matrix to sum.</param>
+            <param name="m2">Second matrix to sum.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Subtraction(LinearAlgebra.Matrix,LinearAlgebra.Matrix)">
+            <summary> Subtracts two matrixes.</summary>
+            <param name="m1">Matrix to subtract from.</param>
+            <param name="m2">Matrix to be subtracted.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)">
+            <summary> Matrix multiplication. Notice that m1 rows should be the same as m2 lines for compatibility.</summary>
+            <param name="m1">First matrix to multiply.</param>
+            <param name="m2">Second matrix to multiply.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Multiply(System.Double,LinearAlgebra.Matrix)">
+            <summary> Matrix scalar multiplication.</summary>
+            <param name="m">Matrix to multiply.</param>
+            <param name="num">Scalar to multiply.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,System.Double)">
+            <summary> Matrix scalar multiplication.</summary>
+            <param name="m">Matrix to multiply.</param>
+            <param name="num">Scalar to multiply.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,System.Double[])">
+            <summary> Matrix post-vector multiplication. Notice that a vector is a [1,Cols] matrix which means
+            vector length should be equal matrix number of columns.</summary>
+            <param name="m">Matrix to multiply.</param>
+            <param name="vet">vector to multiply.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Multiply(System.Double[],LinearAlgebra.Matrix)">
+            <summary> Matrix pre-vector multiplication. Notice that a vector is a [1,Cols] matrix which means
+            vector length should be equal matrix number of lines.</summary>
+            <param name="m">Matrix to multiply.</param>
+            <param name="vet">vector to multiply.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.op_Division(LinearAlgebra.Matrix,System.Double)">
+            <summary> Matrix scalar division.</summary>
+            <param name="m">Matrix to multiply.</param>
+            <param name="num">Scalar to divide each element of matrix.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.Equals(LinearAlgebra.Matrix)">
+            <summary>Compares matrixes and returns true if they are identical.</summary>
+            <param name="Matrix">Matrix to compare to.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.Transpose">
+            <summary>Returns matrix transpose.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.MultiplyElementWise(LinearAlgebra.Matrix)">
+            <summary>Element-wise product. This is not regular matrix product. It multiplies elements 
+            at corresponding positions.</summary>
+            <param name="Matrix">Matrix to multiply element-wise.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.NormEuclidean">
+            <summary>Returns Euclidean norm of the matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.Dot(LinearAlgebra.Matrix)">
+            <summary>Dot product of two matrixes.</summary>
+            <param name="Matrix">Matrix to dot product with/</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.InvertElements">
+            <summary>Element-wise inversion. Returns the matrix with each element (x) inverted (1/x).</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.LUDecomp">
+            <summary>Creates internal LU factorization of this matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.LinearSolve(System.Double[])">
+            <summary>Returns the solution x to the linear system Ax=b, A being this matrix.</summary>
+            <param name="b">Right-hand side known values.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.Determinant">
+            <summary>Returns the determinant of this matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.Inversa">
+            <summary>Returns the inverse of this matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.IdentifyParameters(System.Double[])">
+            <summary>Returns the solution x to the linear system A'Ax=A'b, A being this matrix.</summary>
+            <param name="Y">Right-hand side known values.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.IdentifyParametersWeighted(System.Double[],LinearAlgebra.Matrix)">
+            <summary>Returns the weighted solution x to the linear system A'WAx=A'Wb, 
+            A being this matrix. TO DO: Correct quality check</summary>
+            <param name="Y">Right-hand side known values.</param>
+            <param name="W">Weight matrix.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.IdentifyParametersWeighted(System.Double[],System.Double[])">
+            <summary>Returns the weighted solution x to the linear system A'DAx=A'Db, 
+            A being this matrix. D is a diagonal weight matrix.</summary>
+            <param name="Y">Right-hand side known values.</param>
+            <param name="w">Main diagonal elements of diagonal weight matrix D.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.CheckQuality(System.Double[],System.Double[])">
+            <summary>Calculates R², corrected R² and Quadratic Error for the trySolution x to the linear system A'Ax=A'b, 
+            A being this matrix.</summary>
+            <param name="Y">Right-hand side known values.</param>
+            <param name="trySolution">Solution to use to evaluate quality indexers.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.GramSchmidt">
+            <summary>Applies the Gram-Schmidt orthonormalization method to this matrix, replacing 
+            it by the orthonormalized matrix.</summary>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.GramSchmidt(System.Double[]@)">
+            <summary>Applies the Gram-Schmidt orthonormalization method to this matrix, replacing 
+            it by the orthonormalized matrix and also correcting right-hand Y values for a linear system solve.</summary>
+            <param name="y">Right-hand side known values.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.GramSchmidt(System.Int32[],System.Int32,System.Double[]@)">
+            <summary>Applies the Gram-Schmidt orthonormalization method to this matrix using 
+            a pre-set order of normalization. Replaces current matrix
+            by the orthonormalized matrix and also correcting 
+            right-hand Y values for a linear system solve.</summary>
+            <param name="y">Right-hand side known values.</param>
+            <param name="lineOrder">Line order to apply the orthonormalization method.</param>
+            <param name="indStart">Starts orthonormalization from line lineOrder[indStart]. Assumes previous lines are already
+            normalized.</param>
+        </member>
+        <member name="M:LinearAlgebra.Matrix.ToString">
+            <summary>Returns a string representing this matrix.</summary>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.Item(System.Int32,System.Int32)">
+            <summary> Accesses items in current matrix.</summary>
+            <param name="i">Row of element to access.</param>
+            <param name="j">Column of element to access.</param>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.rowCount">
+            <summary> Gets the number of rows in this matrix.</summary>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.colCount">
+            <summary> Gets the number of columns in this matrix.</summary>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.RSquareIndex">
+            <summary>Returns the R² index of last fit.</summary>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.RSquareCorrectedIndex">
+            <summary>Returns corrected R² index of last fit.</summary>
+        </member>
+        <member name="P:LinearAlgebra.Matrix.QuadraticError">
+            <summary>Returns the sum of quadratic errors of last fit.</summary>
+        </member>
+        <member name="T:LinearAlgebra.frmTestaLinalg">
+            <summary>Teste</summary>
+        </member>
+        <member name="M:LinearAlgebra.frmTestaLinalg.#ctor">
+            <summary>Teste</summary>
+        </member>
+        <member name="F:LinearAlgebra.frmTestaLinalg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LinearAlgebra.frmTestaLinalg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LinearAlgebra.frmTestaLinalg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
