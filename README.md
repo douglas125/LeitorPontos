@@ -16,5 +16,3 @@ LeitorPontos is a tool for quickly extracting data points from an image.
 4. Copy and paste your data to a spreadsheet.
 
 ![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LPtsAcqPts.png "Open image")
-
- 
