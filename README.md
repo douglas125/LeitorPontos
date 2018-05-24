@@ -5,7 +5,8 @@ LeitorPontos is a tool for quickly extracting data points from an image.
 
 1. Open the image (or copy and paste);
 
-[[https://github.com/douglas125/LeitorPontos/blob/master/LeitorPontosImgOpen.png]]
+![alt text](https://github.com/douglas125/LeitorPontos/blob/master/LeitorPontosImgOpen.png "Open image")
+
 
 2. Right click to position 2 reference points;
 3. Click on the points you want to scan;
